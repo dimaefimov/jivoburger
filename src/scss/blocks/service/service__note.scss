@@ -1,0 +1,24 @@
+.service__note {
+    font: {
+        family: ProximaNova;
+        size: getEm(12);
+        weight: normal;
+        style: normal;
+        stretch: normal;
+    }
+    line-height: 1.17;
+    letter-spacing: normal;
+    color: $grey;
+    &--list {
+        list-style: none;
+        padding: 0px;
+        &>li {}
+    }
+
+    margin: 0px;
+    margin-top: getEm(15);
+}
+
+
+@import './media-667/service__note';
+@import './media-1400/service__note';

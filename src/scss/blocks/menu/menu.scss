@@ -1,0 +1,28 @@
+.menu {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    box-sizing: border-box;
+    padding: 0px getEm(30);
+    background: $grey-dark;
+    &>a {
+        display: block;
+        color: $white;
+        text: {
+            transform: uppercase;
+            decoration: none;
+        }
+        margin: auto;
+    }
+    &--is-open {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        left: getEm(20);
+        bottom: 0px;
+        z-index:999;
+    }
+}
+
+
+@import './media-1400/menu';

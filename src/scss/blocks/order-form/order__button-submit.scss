@@ -1,0 +1,7 @@
+.order__button-submit {
+    height: getEm(51);
+    margin-top: getEm(30);
+}
+
+@import '../order/media-667/order__button-submit';
+@import '../order/media-1400/order__button-submit';

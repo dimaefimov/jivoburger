@@ -1,0 +1,19 @@
+.service__description {
+    font: {
+        family: ProximaNova;
+        size: getEm(17);
+        weight: normal;
+        style: normal;
+        stretch: normal;
+    };
+    line-height: 1.35;
+    letter-spacing: normal;
+    color: $grey;
+    margin: 0px;
+
+
+    margin-top: getEm(45);
+}
+
+@import './media-667/service__description';
+@import './media-1400/service__description';

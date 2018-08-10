@@ -1,0 +1,9 @@
+.service__button-buy-sertificate {
+    height: getEm(50);
+    display: block;
+
+    margin-top: getEm(30);
+}
+
+@import './media-667/service__button-buy-sertificate';
+@import './media-1400/service__button-buy-sertificate';

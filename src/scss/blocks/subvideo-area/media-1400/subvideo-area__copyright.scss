@@ -1,0 +1,11 @@
+@media (min-width: #{getEm(1400,'px',12)}) {
+    .subvideo-area__copyright {
+        width: getEm(50,'%');
+        padding: #{getEm(30,'rem',12)} #{getEm(40,'rem',12)};
+        font-size: getEm(15,'rem',12);
+        line-height: getEm(18,'rem',12);
+        margin-left: auto;
+
+        padding-top: getEm(66,'rem',12);
+    }
+}

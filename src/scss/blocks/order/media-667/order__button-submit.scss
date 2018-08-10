@@ -1,0 +1,10 @@
+@media (min-width: #{getEm(667,'px')}) {
+    .order__button-submit {
+        &>span:nth-child(2){
+            display: none;
+        }
+
+        height: getEm(35);
+        max-width: getEm(271);
+    }
+}

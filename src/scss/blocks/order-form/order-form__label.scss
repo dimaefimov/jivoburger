@@ -1,0 +1,15 @@
+.order-form__label {
+    font: {
+        family: ProximaNova;
+        size: getEm(13);
+        weight: normal;
+        style: normal;
+        stretch: normal;
+    };
+    line-height: normal;
+    letter-spacing: normal;
+    color: $black;
+
+    margin-top: getEm(35);
+    display: block;
+}

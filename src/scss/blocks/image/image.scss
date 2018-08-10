@@ -1,0 +1,18 @@
+.image {
+    background: {
+        // image: url("./pic.jpg");
+        repeat:  no-repeat;
+        size: cover;
+    };
+    width:auto;
+    align-self: stretch;
+    &--service-wedding {
+        // background-image: url("./images/wedding/wedding-pad.jpg");
+    }
+    &--order {
+        background-image: url("./images/order/order-image.png");
+    }
+}
+
+@import './media-667/image';
+@import './media-1400/image';

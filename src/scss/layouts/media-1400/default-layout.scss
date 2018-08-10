@@ -1,0 +1,128 @@
+@media (min-width: #{getEm(1400,'px',12)}) { //AND (min-height: #{getEm(800,'px')}) {
+    
+    
+    .page-header {
+        position: fixed;
+        width: 100vw;
+        z-index: 999;
+
+        &>*{
+            // max-width: getEm(1400,'rem',12);
+            max-width: 100%;
+            width: auto;
+            margin: 0px auto getEm(0);
+            height: getEm(140,'rem',12);
+        }
+    }
+    
+    main {
+        // .section {
+        //     display: none;
+        // }
+        // // flex-flow: row wrap;
+        // &>.section:nth-child(5) {
+        //     display: flex !important;
+        // }
+        
+    }
+    
+    .section {
+        max-width: getEm(100,'%',12);
+        // max-width: 100%;//getEm(1400);
+        display: flex;
+        flex-flow: row wrap;
+        min-height: 100vh;
+
+        box-sizing: border-box;
+        padding-top: #{getEm(120,'rem',12)}; 
+        background-clip: border-box;
+        position: relative;
+        margin-bottom: 0px;
+        
+        @include two-color();
+        
+
+        &>.video-area {
+            flex: 0 0 auto;
+            width: getEm(1244,'rem',12);
+            min-width:51%;
+            flex-grow: 1;
+            height: getEm(533,'rem',12);
+            margin: 0px #{getEm(60,'rem',12)};
+            // margin-left: #{getEm(40)};
+            // margin-right: #{getEm(20)};
+            // max-height: 100%;
+        }
+        &>.subvideo-area {
+            min-width:51%;
+        }
+    
+        &>.service {
+            margin: 0px getEm(20,'rem',12);
+        }
+    
+        &>.order {
+            margin: 0px getEm(20,'rem',12);
+            
+        }
+        &--order {
+            @include two-color--reverse();
+        }
+        &--main {
+            @include two-color--reverse();
+            padding-top: 0px;
+        }
+
+        &::before {
+            z-index:999;
+            position: absolute;
+            overflow: hidden;
+
+            width: getEm(200,'rem',12);
+            bottom:20vh;
+            bottom: calc(50% - #{getEm(200,'rem',12)});//20vh;
+            counter-increment: section;
+            // content: counter(section) " –––––––––––– 6";
+            content: attr(data-page) " \2212\2212\2212\2212\2212\2212\2212\2212\2212\2212\2212\2212 6";
+            /* Точка поворота в правом верхнем углу */
+            -webkit-transform-origin: getEm(16,'rem',12) 0;
+            -moz-transform-origin: getEm(16,'rem',12) 0;
+            -o-transform-origin: getEm(16,'rem',12) 0;
+            -ms-transform-origin: getEm(16,'rem',12) 0;
+            transform-origin: getEm(16,'rem',12) 0;
+
+            -moz-transform: rotate(270deg); /* Для Firefox */
+            -ms-transform: rotate(270deg); /* Для IE */
+            -webkit-transform: rotate(270deg); /* Для Safari, Chrome, iOS */
+            -o-transform: rotate(270deg); /* Для Opera */
+            transform: rotate(270deg);
+            
+            font: {
+                family: KudryashevDisplay; //Athelas;
+                size: getEm(21,'rem',12);
+                weight: bold;
+                style: normal;
+                stretch: normal;
+            };
+
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: $black;
+        }
+
+        &__social-links {
+            display: flex; // switched from <-- display: none 
+            position: absolute;
+            z-index: 999;
+            right: getEm(22,'rem',12);
+            bottom: calc(50% - #{getEm(200,'rem',12)});//20vh;
+            height: getEm(200,'rem',12);
+            font-size: getEm(22,'rem',12);
+        }
+    }
+
+    .page-footer {
+        display: none;
+    }
+}

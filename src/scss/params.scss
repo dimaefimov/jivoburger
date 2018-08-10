@@ -1,0 +1,29 @@
+// Main color pallete
+$white: #ffffff;
+$grey-lightest: #f3f3f3;
+$grey-light: #e7e8ee;
+$grey: #575757;
+$grey-dark: #474747;
+$grey-darker: #3c3c3c;
+$grey-darkest: #35302f;
+$black: #000000;
+$green: #77cb1c;
+
+$red: #ff0000;
+$blue: #0000ff;
+
+// Colors by goal
+$bg-color: $white;
+
+
+// Animantions
+$animation: 0.6s;   // animation speed
+$scale: 1;          // icon scale 68/68 default
+
+// calculated
+$hfsVal: 10; // html font-size in px
+$bfsVal: 1.0; // body font-size in em
+$hfs: #{$hfsVal}px;
+$bfs: #{$bfsVal}em;
+
+$maxMobile: #{getEm(375,'px')};

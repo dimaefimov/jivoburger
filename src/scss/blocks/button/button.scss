@@ -1,0 +1,105 @@
+.button {
+    font: {
+        family: KudryashevDisplay; //LucidaGrande;
+        size: getEm(16);
+        weight: bold;
+        style: normal;
+        stretch: normal;
+    };
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    box-sizing: border-box;
+    align-self: stretch;
+    height: 100%;
+    width: 100%;
+    // Размеры пусть задаются в родителе.
+    // но центрирование нужно задать здесь
+    // height: getEm(50);
+    // line-height: getEm(50);
+    // width: getEm(355);
+    // margin: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 1 0 auto;
+    justify-content: center;
+    align-items: center;
+
+    text-transform: uppercase;
+    text-decoration: none;
+
+    border-radius: 0;
+
+    &--transparent {
+        color: $grey-darkest;
+        background-color: transparent;
+        border: solid getEm(1) $grey-darkest;
+
+        &:hover {
+            background-color: $grey-lightest;
+        }
+        &:active {
+            background-color: $grey-lightest;
+            border: none;
+        }
+    }
+    &--white {
+        color: $grey-darkest;
+        background-color: $white;
+        border: solid getEm(1) $white;
+
+        &:hover {
+            background-color: $grey-lightest;
+        }
+        &:active {
+            background-color: $grey-lightest;
+            border: none;
+        }
+    }
+    &--transparent-white {
+        color: $white;
+        background-color: transparent;
+        border: solid getEm(1) $white;
+
+        &:hover {
+            color: $grey-darkest;
+            background-color: $grey-lightest;
+        }
+        &:active {
+            color: $grey-darkest;
+            background-color: $grey-lightest;
+            border: none;
+        }        
+    }
+
+    &--black {
+        color: $white;
+        background-color: $grey-darkest;
+        border: solid getEm(1) $grey-darkest;
+        
+        &:hover {
+            background-color: $black;
+        }
+        &:active {
+            background-color: $grey-darker;
+        }
+        &:disabled {
+            color: $grey-darker;
+        }
+    }
+    &--link-call {
+        text-transform: none;
+        color: $black;
+        font: {
+            weight: normal;
+        }
+        &::before {
+            content: '📞  ';
+            color: $black !important;
+            display: inline;
+        }
+    }
+}
+
+@import './media-667/button';
+@import './media-1400/button';

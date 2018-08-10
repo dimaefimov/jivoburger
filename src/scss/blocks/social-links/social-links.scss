@@ -1,0 +1,22 @@
+.social-links {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 0px;
+    &>* {
+        margin-left:getEm(14);
+    }
+    &>*:first-child {
+        margin-left: 0px;
+    }
+    &--column {
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        &>* {
+            margin: 0px;
+        }   
+    }
+}

@@ -1,0 +1,19 @@
+.order__caption {
+    display: block;
+    margin: 0px;
+    
+    font: {
+        family: KudryashevDisplay; //AcademyC;
+        size: getEm(40);
+        weight: normal;
+        style: normal;
+        stretch: normal;
+    };
+    line-height: 0.95;
+    letter-spacing: normal;
+    color: $black;
+}
+
+
+@import './media-667/order__caption';
+@import './media-1400/order__caption';

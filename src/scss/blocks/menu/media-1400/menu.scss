@@ -1,0 +1,28 @@
+@media (min-width: #{getEm(1400,'px',12)}) {
+    .menu {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+        box-sizing: border-box;
+        padding: 0px getEm(190,'rem',12);
+        background: transparent;
+        &>a {
+            display: block;
+            color: $black;
+            font: {
+                family: ProximaNova;
+                weight: 600;
+                size: getEm(20,'rem',12);
+            }
+            text: {
+                transform: uppercase;
+                decoration: none;
+            }
+            &:hover {
+                text-decoration: underline;
+            }
+            // margin: 0px getEm(20,'rem',12);
+        }
+    }
+}

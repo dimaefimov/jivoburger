@@ -1,0 +1,7 @@
+@media (min-width: #{getEm(1400,'px',12)}) {
+    .service__image {
+        display: block;
+        height: 100%;
+        order: -1;
+    }
+}

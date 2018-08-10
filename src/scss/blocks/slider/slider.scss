@@ -1,0 +1,105 @@
+.slider {
+    position: relative;
+        &__items {
+            position:relative;
+            width: getEm(100,'%');
+            height: getEm(100,'%');
+            &>div { // http://front-back.com/how-to-make-absolute-positioned-elements-overlap-their-overflow-hidden-parent
+                width: getEm(100,'%');
+                height: getEm(100,'%');
+                overflow: hidden;
+                display: flex;
+                flex-flow: row nowrap;
+            }
+        }
+        &__item {
+            flex-basis: getEm(100,'%');
+            min-width: getEm(100,'%');
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        &__item--active &__image-preview-wrapper {
+            outline: 1px solid $grey;
+        }
+        
+        
+
+    &__image-preview-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom:getEm(5,'%');
+        height: getEm(20,'%');
+        background: $white;
+        width:25%;
+
+        &--active {
+            outline:1px solid $grey;
+        }
+    }
+
+    &__picture-preview {
+        // position:relative;
+    }
+
+    &__image-preview,
+    &__picture-preview {
+            opacity: .8; 
+            height:100%;
+            max-height:100%;
+            max-width:100%;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &__item:nth-child(3) &__image-preview-wrapper {
+        right: calc(#{getEm(0,'%')} + (#{getEm(25,'%')} * 0) + 0%);
+    }
+    &__item:nth-child(2) &__image-preview-wrapper {
+        right: calc(#{getEm(0,'%')} + (#{getEm(25,'%')} * 1) + 2%);
+    }
+    &__item:nth-child(1) &__image-preview-wrapper {
+        right: calc(#{getEm(0,'%')} + (#{getEm(25,'%')} * 2) + 4%);
+    }
+
+    &__image-wrapper {
+        // min-width:100%;
+        // min-height: 100%;
+        width: getEm(100,'%');
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+    }
+    &__image,
+    &__picture {
+        width: getEm(100,'%');
+        height: auto;
+        flex-shrink: 0;
+        flex-grow: 1;
+    }
+
+    &__description {
+        display: none;
+    }
+
+    &--service1 {
+        // background-image: url("./service-image-1.png")
+    }
+    &--service2 {
+        // background-image: url("./service-image-2.png")
+    }
+    &--service3 {
+        // background-image: url("./service-image-3.png")
+    }
+}
+
+@import './media-667/slider.scss';
+@import './media-1400/slider.scss';

@@ -1,0 +1,11 @@
+@media (min-width: #{getEm(1400,'px',12)}) {
+    .main-header {
+        display: flex;
+        flex-flow: row wrap;
+        flex: 0 1 auto;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 0px getEm(10,12);
+    }
+}

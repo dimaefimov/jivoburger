@@ -1,0 +1,38 @@
+.social-link {
+    background: {
+        image: url('./socials.png');
+        repeat: no-repeat;
+        size: contain;
+        position: center center;
+    }
+    // cursor: pointer;
+
+
+    &--vk {
+        background: {
+            image: url('./images/icons/vk@3x.png');
+        }
+    }
+    &--instagram {
+        background: {
+            image: url('./images/icons/instagram@3x.png');
+        }
+    }
+    &--facebook {
+        background: {
+            image: url('./images/icons/fb@3x.png');
+        }
+    }
+
+    &>a {
+        text-decoration: none;
+        color: transparent;
+        display: block;
+        overflow: hidden;
+        max-width:getEm(40);
+        max-height:getEm(40);
+    }
+}
+
+
+@import './media-1400/social-link';

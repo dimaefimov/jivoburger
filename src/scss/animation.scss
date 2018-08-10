@@ -1,0 +1,146 @@
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.slider__item {
+    & .slider__description {
+        opacity: 0;
+        // transition: opacity .3s;
+    }
+}
+.slider__item--active {
+    & .slider__description {
+        opacity: 1;
+        animation-name: blink;
+        animation-duration: 1.2s;
+        animation-delay: 0s;
+        animation-iteration-count: 1; // infinite
+        animation-timing-function: ease-out;
+        
+        // -webkit-animation-fill-mode: forwards;  /* it works with Chrome */
+        // -moz-animation-fill-mode: forwards;  /* works with Mozilla Firefox */
+        // -ms-animation-fill-mode: forwards;  /* works with IE */
+        // -o-animation-fill-mode: forwards;  /* works with Opera */
+         animation-fill-mode: forwards;  /* should work with all browser .... in theory */
+
+        animation-play-state: running;
+    }
+}
+
+.slider__item--right {
+    transition: margin-left 1s;
+    margin-left: 0%;
+}
+
+.slider__item--left {
+    transition: margin-left 1s;
+    margin-left:-100%;
+}
+
+@keyframes example {
+    0% {
+        position: absolute;
+        right:-60%;
+    }
+    1% {
+        position: relative;
+        right:-50%;
+    }
+    100% {
+        position: relative;
+        right: 0%;
+    }
+}
+@keyframes example2 {
+    0% {
+        position: absolute;
+        left:-60%;
+    }
+    1% {
+        position: relative;
+        left:-50%;
+    }
+    100% {
+        position: relative;
+        left: 0px;
+    }
+}
+
+@media (min-width: #{getEm(1400,'px',12)}) { //AND (min-height: #{getEm(800,'px')}) {
+    .section {
+        overflow: hidden;
+        position: relative;
+
+        // animation-name: example;
+        // animation-duration: .5s;
+        // animation-delay: 0s;
+        // animation-iteration-count: 1; // infinite
+        // animation-timing-function: ease-in-out;
+        // animation-fill-mode: backwards;
+    }
+
+    .section.off {
+        display: none;
+    }
+
+
+    .section__hover {
+        transform: translateZ(0);
+        will-change:right;
+        z-index:2;
+        position:relative; // must be for IE
+        right:-50%;
+        animation-name: example;
+        animation-duration: 1s;
+        animation-delay: 0s;
+        animation-iteration-count: 1; // infinite
+        animation-timing-function: ease-out;
+        
+        // -webkit-animation-fill-mode: forwards;  /* it works with Chrome */
+        // -moz-animation-fill-mode: forwards;  /* works with Mozilla Firefox */
+        // -ms-animation-fill-mode: forwards;  /* works with IE */
+        // -o-animation-fill-mode: forwards;  /* works with Opera */
+         animation-fill-mode: forwards;  /* should work with all browser .... in theory */
+
+        animation-play-state: running;
+    }
+
+    .section__hover2.service__image {
+        z-index:1;
+    }
+
+    .active {
+        text-decoration: underline !important;
+    }
+    .section__hover2 {
+        transform: translateZ(0);
+        will-change:left;
+        z-index:2;
+        position:relative; // must be for IE
+        left:-50%;
+        animation-name: example2;
+        animation-duration: 1s;
+        animation-delay: 0s;
+        animation-iteration-count: 1; // infinite
+        animation-timing-function: ease-out;
+        
+        // -webkit-animation-fill-mode: forwards;  /* it works with Chrome */
+        // -moz-animation-fill-mode: forwards;  /* works with Mozilla Firefox */
+        // -ms-animation-fill-mode: forwards;  /* works with IE */
+        // -o-animation-fill-mode: forwards;  /* works with Opera */
+         animation-fill-mode: forwards;  /* should work with all browser .... in theory */
+
+        animation-play-state: running;
+    }
+}

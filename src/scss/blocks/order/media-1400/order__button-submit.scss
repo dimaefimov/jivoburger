@@ -1,0 +1,7 @@
+@media (min-width: #{getEm(1400,'px',12)}) {
+    .order__button-submit {
+        height: getEm(42,'rem',12);
+        padding: getEm(13,'rem',12) getEm(30,'rem',12);
+        max-width: getEm(280,'rem',12);
+    }
+}

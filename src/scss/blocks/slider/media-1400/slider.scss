@@ -1,0 +1,56 @@
+@media (min-width: #{getEm(1400,'px',12)}) {
+    .slider {
+        
+        &__image-preview-wrapper {
+
+        }
+        &__item:nth-child(3) &__image-preview-wrapper {
+            right: calc(-#{getEm(5,'%')} + (#{getEm(25,'%')} * 0) + 0%);
+        }
+        &__item:nth-child(2) &__image-preview-wrapper {
+            right: calc(-#{getEm(5,'%')} + (#{getEm(25,'%')} * 1) + 2%);
+        }
+        &__item:nth-child(1) &__image-preview-wrapper {
+            right: calc(-#{getEm(5,'%')} + (#{getEm(25,'%')} * 2) + 4%);
+        }
+
+        &__description {
+            font: {
+                family: ProximaNova;
+                size: getEm(16,'rem',12);
+                weight: normal;
+                style: normal;
+                stretch: normal;
+            }
+            line-height: getEm(18,'rem',12);
+            letter-spacing: normal;
+            color: $black;
+
+
+            align-self: flex-start;
+            flex-grow: 0;
+            flex-shrink: 1;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: flex-start;
+
+            margin-top:getEm(20,'rem',12);
+            margin-bottom:getEm(20,'rem',12);
+            width: getEm(100,'%');
+        }
+        &__description-main {
+            max-width: getEm(490,'rem',12); // обязательное указание фикса - иначе верстка поедет
+            flex: 1 1 auto;
+            margin: 0px auto 0px #{getEm(120,'rem',12)};
+            align-self: flex-start;
+        }
+
+        &__description-price-list {
+            // flex: 0 0 auto;
+        }
+
+        &__description-price-old {
+            text-decoration: line-through;
+        }
+    }
+}

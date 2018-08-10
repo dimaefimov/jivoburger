@@ -1,0 +1,70 @@
+html {
+    font-size: $hfs;
+}
+
+body,
+html {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: $bfs;
+    counter-reset: section;
+}
+
+main {
+    // @include test-border($red);
+    // do'nt style this element - just stay it for sematic html markup. (i.e. for yandex||google||ios reader)
+    margin: 0px;
+}
+
+.page-header {
+    margin-bottom: getEm(10);
+    &>*{
+        max-width: getEm(375);
+        margin: 0px auto getEm(0);
+        min-height: getEm(54);
+    }
+}
+
+.section {
+    margin-bottom: getEm(20);
+    &--up38next {
+        margin-bottom: -(getEm(15));
+    }
+    max-width: getEm(375);
+    // outline: #{getEm(1,'px')} solid $grey-light;
+    margin: auto;
+
+    &>.video-area {
+        width: auto;
+        height: getEm(184);
+    }
+
+    &>.service {
+        margin: 0px getEm(20) getEm(50);
+    }
+
+    &>.order {
+        margin: 0px getEm(20);
+    }
+
+    &__social-links {
+        display: none;
+    }
+}
+
+.page-footer {
+    &>*{
+        max-width: getEm(375);
+        margin: 0px auto;
+        box-sizing: border-box;
+        padding: 0px getEm(20);
+    }
+}
+
+@import './media-500/default-layout';
+@import './media-667/default-layout';
+@import './media-1400/default-layout';
