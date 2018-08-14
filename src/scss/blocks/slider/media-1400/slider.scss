@@ -1,6 +1,6 @@
 @media (min-width: #{getEm(1400,'px',12)}) {
     .slider {
-        
+
         &__image-preview-wrapper {
 
         }
@@ -17,12 +17,12 @@
         &__description {
             font: {
                 family: ProximaNova;
-                size: getEm(16,'rem',12);
+                size: getEm(20,'rem',16);
                 weight: normal;
                 style: normal;
                 stretch: normal;
             }
-            line-height: getEm(18,'rem',12);
+            line-height: getEm(20,'rem',16);
             letter-spacing: normal;
             color: $black;
 

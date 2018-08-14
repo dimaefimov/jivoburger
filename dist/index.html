@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Свадебный сертификат</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="style.css" /> -->
+    <base href="/assets/templates/wedding_landing/dist/">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="style.css" /> загрузка идет через js-->
     <style>
         body>header,
         body>main,
@@ -20,18 +21,19 @@
         }
     </style>
     <script src="app.bundle.js" async></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 </head>
 
 <body>
     <header class="page-header">
         <div class="main-header">
-            <a href="#page-1" data-page="1" id="logo" class="main-header__logo logo"></a>
+            <a href="/wedding#page-1" data-page="1" id="logo" class="main-header__logo logo"></a>
             <nav class="main-header__menu menu" id="menu">
-                <a href="#page-2" data-page="2">О сертификате</a>
-                <a href="#page-3" data-page="3">Фарфор</a>
-                <a href="#page-4" data-page="4">Хрусталь</a>
-                <a href="#page-5" data-page="5">Текстиль</a>
-                <a href="#page-6" data-page="6">Заказать сертификат</a>
+                <a href="/wedding#page-2" data-page="2">О сертификате</a>
+                <a href="/wedding#page-3" data-page="3">Фарфор</a>
+                <a href="/wedding#page-4" data-page="4">Хрусталь</a>
+                <a href="/wedding#page-5" data-page="5">Текстиль</a>
+                <a href="/wedding#page-6" data-page="6">Заказать сертификат</a>
             </nav>
             <div class="main-header__support support" id="support">
                 <div class="support__icon"></div>
@@ -49,12 +51,12 @@
             </ul>
             <div class="video-area">
                 <div class="video-area__video-container">
-                    <video  class="video-area__video" 
-                            autoplay="autoplay" 
-                            id="video-header" 
-                            preload="auto" 
-                            muted="" 
-                            playsinline="" 
+                    <video  class="video-area__video"
+                            autoplay="autoplay"
+                            id="video-header"
+                            preload="auto"
+                            muted=""
+                            playsinline=""
                             loop >
                         <!-- <source src="./video/1700.mp4" type="video/mp4" media="screen and (min-device-width:1200px)">
                         <source src="./video/1700.webm" type="video/webm" media="screen and (min-device-width:1200px)">
@@ -62,18 +64,18 @@
                         <source src="./video/1200.webm" type="video/webm" media="screen and (min-device-width:667px)"> -->
                         <source src="./video/667.mp4" type="video/mp4">
                         <source src="./video/667.webm" type="video/webm">
-                        
-                        
+
+
                     </video>
                 </div>
-                
-                
+
+
                 <h1 class="video-area__caption">
                     <span>Свадебный</span><span>сертификат</span>
                 </h1>
                 <div class="video-area__buttons">
-                    <a class="video-area__button-buy-sertificate button button--white" href="#page-6" data-page="6">Купить сертификат</a>
-                    <a class="video-area__button-details button button--transparent-white" href="/">Рассказать подробно</a>
+                    <a class="video-area__button-buy-sertificate button button--white" href="/wedding#page-6" data-page="6">Купить сертификат</a>
+                    <a class="video-area__button-details button button--transparent-white" href="/wedding#">Рассказать подробно</a>
                 </div>
             </div>
             <div class="subvideo-area">
@@ -102,11 +104,17 @@
                     <li>— Вышивка монограммы на 1 виде салфеток, так же любого количества (6/12/18...персон).</li>
                 </ul>
                 <div class="service__buttons">
-                    <span class="service__button-buy-sertificate"><a class="button button--black" href="#page-6" data-page="6">Купить сертификат</a></span>
-                    <span class="service__button-details"><a class="button button--transparent" href="/">Рассказать подробно</a></span>
+                    <span class="service__button-buy-sertificate"><a class="button button--black" href="/wedding#page-6" data-page="6">Купить сертификат</a></span>
+                    <span class="service__button-details"><a class="button button--transparent" href="/wedding#">Рассказать подробно</a></span>
                 </div>
                 <span class="service__button-call service__button-call--mainblock"><a class="button button--transparent" href="tel:88002506181" title="телефон менеджера - 8 800 250 61 81">Позвонить нам</a></span>
                 <span class="service__link-call service__link-call--reverse"><a class="button button--link-call" href="tel:88002506181" title="телефон менеджера - 8 800 250 61 81">Хочу задать вопрос по телефону</a></span>
+                <!--<div class="service__calltext">
+                  <p>
+                    Подробнее о Сертификате вам расскажет наш менеджер: 8 (800) 250 61 81 <br />
+                    Доставка по России бесплатно
+                  </p>
+                </div>-->
                 <p class="service__subnote">Данный сертификат дает право на единоразовую 10% скидку на приобретаемый товар или составление заказа. Вы можете приобрести карту на любую желаемую сумму от 15 000 р., кратную 1000 р.</p>
             </div>
         </section>
@@ -128,13 +136,13 @@
                                     <img src="./images/1.480x381.jpg" alt="" class="slider__image" />
                                 </picture>
                             </div>
-                            <div class="slider__image-preview-wrapper">
+                            <!--<div class="slider__image-preview-wrapper">
                                 <picture class="slider__picture-preview">
                                     <source srcset="./images/1.206x165.jpg" media="(min-width: 1200px)">
                                     <source srcset="./images/1.125x100.jpg" media="(min-width: 667px)">
                                     <img src="./images/1.79x63.jpg" alt="" class="slider__image-preview" />
                                 </picture>
-                            </div>
+                            </div>-->
                             <div class="slider__description">
                                     <p class="slider__description-main"><b>На фотографии:</b> На фотографии: чайный сервиз на 6 персон из коллекции «Шер Бланк» от Noritake</p>
                                     <div class="slider__description-price-list">
@@ -151,13 +159,13 @@
                                     <img src="./images/2.480x381.jpg" alt="" class="slider__image" />
                                 </picture>
                             </div>
-                            <div class="slider__image-preview-wrapper">
+                            <!--<div class="slider__image-preview-wrapper">
                                 <picture class="slider__picture-preview">
                                     <source srcset="./images/2.206x165.jpg" media="(min-width: 1200px)">
                                     <source srcset="./images/2.125x100.jpg" media="(min-width: 667px)">
                                     <img src="./images/2.79x63.jpg" alt="" class="slider__image-preview" />
                                 </picture>
-                            </div>
+                            </div>-->
                             <div class="slider__description">
                                     <p class="slider__description-main"><b>На фотографии:</b> чайный сервиз на 6 персон из коллекции «Чистый опал» от Lenox.</p>
                                     <div class="slider__description-price-list">
@@ -174,13 +182,13 @@
                                     <img src="./images/3.480x381.jpg" alt="" class="slider__image" />
                                 </picture>
                             </div>
-                            <div class="slider__image-preview-wrapper">
+                            <!--<div class="slider__image-preview-wrapper">
                                 <picture class="slider__picture-preview">
                                     <source srcset="./images/3.206x165.jpg" media="(min-width: 1200px)">
                                     <source srcset="./images/3.125x100.jpg" media="(min-width: 667px)">
                                     <img src="./images/3.79x63.jpg" alt="" class="slider__image-preview" />
                                 </picture>
-                            </div>
+                            </div>-->
                             <div class="slider__description">
                                     <p class="slider__description-main"><b>На фотографии:</b> чайный сервиз на 6 персон из коллекции «Дворцовый сад, Маркеса» от Lenox.</p>
                                     <div class="slider__description-price-list">
@@ -190,15 +198,32 @@
                             </div>
                         </div>
                     </div>
-                </div></div>
+                </div>
+                    <div class="slider__controls">
+                      <span class="button button-controls active"></span>
+                      <span class="button button-controls"></span>
+                      <span class="button button-controls"></span>
+                      <span class="button button-controls"></span>
+                      <span class="button button-controls"></span>
+                      <span class="button button-controls"></span>
+                    </div>
+                    <div class="slider__caret--left"></div>
+                    <div class="slider__caret--right"></div>
+              </div>
                 <p class="service__description">Красивое сочетание из переплетенных букв имени или фамилии станет украшением вашего семейного сервиза. Отличительный знак в виде монограммы – не только красивая традиция, но и особая привилегия её обладателя.</p>
                 <p class="service__note">Нанесение монограммы выполняется на одном виде фарфоровых тарелок (6/12/18...персон) в зависимости от комплектации сервиза.<br />
                         - Нанесение монограмм возможно в любых цветах, а также с использованием золота или платины по предварительной консультации с мастером.</p>
                 <div class="service__buttons">
-                    <span class="service__button-buy-sertificate"><a class="button button--black" href="#page-6" data-page="6">Купить сертификат</a></span>
-                    <span class="service__button-details"><a class="button button--transparent" href="/">Рассказать подробно</a></span>
+                    <span class="service__button-buy-sertificate"><a class="button button--black" href="/wedding#page-6" data-page="6">Купить сертификат</a></span>
+                    <span class="service__button-details"><a class="button button--transparent" href="/wedding#">Рассказать подробно</a></span>
                 </div>
                 <span class="service__link-call"><a class="button button--link-call" href="tel:88002506181" title="телефон менеджера - 8 800 250 61 81">Хочу задать вопрос по телефону</a></span>
+                <div class="service__calltext">
+                  <p>
+                    Подробнее о Сертификате вам расскажет наш менеджер: 8 (800) 250 61 81 <br />
+                    Доставка по России бесплатно
+                  </p>
+                </div>
             </div>
         </section>
         <section class="section" id="page-4" data-page="4">
@@ -219,13 +244,13 @@
                                     <img src="./images/4.480x381.jpg" alt="" class="slider__image" />
                                 </picture>
                             </div>
-                            <div class="slider__image-preview-wrapper">
+                            <!--<div class="slider__image-preview-wrapper">
                                 <picture class="slider__picture-preview">
                                     <source srcset="./images/4.206x165.jpg" media="(min-width: 1200px)">
                                     <source srcset="./images/4.125x100.jpg" media="(min-width: 667px)">
                                     <img src="./images/4.79x63.jpg" alt="" class="slider__image-preview" />
                                 </picture>
-                            </div>
+                            </div>-->
                             <div class="slider__description">
                                     <p class="slider__description-main"><b>На фотографии:</b> Набор бокалов для красного вина 497 мл на 6 персон из коллекции «Вкус» от Schott Zwiesel.</p>
                                     <div class="slider__description-price-list">
@@ -242,13 +267,13 @@
                                     <img src="./images/5.480x381.jpg" alt="" class="slider__image" />
                                 </picture>
                             </div>
-                            <div class="slider__image-preview-wrapper">
+                            <!--<div class="slider__image-preview-wrapper">
                                 <picture class="slider__picture-preview">
                                     <source srcset="./images/5.206x165.jpg" media="(min-width: 1200px)">
                                     <source srcset="./images/5.125x100.jpg" media="(min-width: 667px)">
                                     <img src="./images/5.79x63.jpg" alt="" class="slider__image-preview" />
                                 </picture>
-                            </div>
+                            </div>-->
                             <div class="slider__description">
                                     <p class="slider__description-main"><b>На фотографии:</b> Набор бокалов для красного вина 170 мл на 6 персон из коллекции «Моцарт» от Moser</p>
                                     <div class="slider__description-price-list">
@@ -265,13 +290,13 @@
                                     <img src="./images/6.480x381.jpg" alt="" class="slider__image" />
                                 </picture>
                             </div>
-                            <div class="slider__image-preview-wrapper">
+                            <!--<div class="slider__image-preview-wrapper">
                                 <picture class="slider__picture-preview">
                                     <source srcset="./images/6.206x165.jpg" media="(min-width: 1200px)">
                                     <source srcset="./images/6.125x100.jpg" media="(min-width: 667px)">
                                     <img src="./images/6.79x63.jpg" alt="" class="slider__image-preview" />
                                 </picture>
-                            </div>
+                            </div>-->
                             <div class="slider__description">
                                     <p class="slider__description-main"><b>На фотографии:</b> Набор бокалов для белого вина 100 мл на 6 персон из коллекции «Леди Гамильтон» от Moser</p>
                                     <div class="slider__description-price-list">
@@ -281,15 +306,32 @@
                             </div>
                         </div>
                     </div>
-                </div></div>
+                </div>
+                <div class="slider__controls">
+                  <span class="button button-controls active"></span>
+                  <span class="button button-controls"></span>
+                  <span class="button button-controls"></span>
+                  <span class="button button-controls"></span>
+                  <span class="button button-controls"></span>
+                  <span class="button button-controls"></span>
+                </div>
+                <div class="slider__caret--left"></div>
+                <div class="slider__caret--right"></div>
+              </div>
                 <p class="service__description">Нанесение гравировки в виде инициалов, возможно также с использованием золота или платины</p>
                 <p class="service__note">Нанесение монограммы выполняется на одном виде бокалов (6/12/18…персон).<br />
                     - Нанесение монограмм возможно в любых цветах, а также с использованием золота или платины по предварительной консультации с мастером.</p>
                 <div class="service__buttons">
-                    <span class="service__button-buy-sertificate"><a class="button button--black" href="#page-6" data-page="6">Купить сертификат</a></span>
-                    <span class="service__button-details"><a class="button button--transparent" href="/">Рассказать подробно</a></span>
+                    <span class="service__button-buy-sertificate"><a class="button button--black" href="/wedding#page-6" data-page="6">Купить сертификат</a></span>
+                    <span class="service__button-details"><a class="button button--transparent" href="/wedding#">Рассказать подробно</a></span>
                 </div>
                 <span class="service__link-call"><a class="button button--link-call" href="tel:88002506181" title="телефон менеджера - 8 800 250 61 81">Хочу задать вопрос по телефону</a></span>
+                <div class="service__calltext">
+                  <p>
+                    Подробнее о Сертификате вам расскажет наш менеджер: 8 (800) 250 61 81 <br />
+                    Доставка по России бесплатно
+                  </p>
+                </div>
             </div>
         </section>
         <section class="section" id="page-5" data-page="5">
@@ -310,13 +352,13 @@
                                     <img src="./images/7.480x381.jpg" alt="" class="slider__image" />
                                 </picture>
                             </div>
-                            <div class="slider__image-preview-wrapper">
+                            <!--<div class="slider__image-preview-wrapper">
                                 <picture class="slider__picture-preview">
                                     <source srcset="./images/7.206x165.jpg" media="(min-width: 1200px)">
                                     <source srcset="./images/7.125x100.jpg" media="(min-width: 667px)">
                                     <img src="./images/7.79x63.jpg" alt="" class="slider__image-preview" />
                                 </picture>
-                            </div>
+                            </div>-->
                             <div class="slider__description">
                                     <p class="slider__description-main"><b>На фотографии:</b> Набор салфеток под приборы 50x35см, КРЕСТЕЦКАЯ СТРОЧКА</p>
                                     <div class="slider__description-price-list">
@@ -333,13 +375,13 @@
                                     <img src="./images/8.480x381.jpg" alt="" class="slider__image" />
                                 </picture>
                             </div>
-                            <div class="slider__image-preview-wrapper">
+                            <!--<div class="slider__image-preview-wrapper">
                                 <picture class="slider__picture-preview">
                                     <source srcset="./images/8.206x165.jpg" media="(min-width: 1200px)">
                                     <source srcset="./images/8.125x100.jpg" media="(min-width: 667px)">
                                     <img src="./images/8.79x63.jpg" alt="" class="slider__image-preview" />
                                 </picture>
-                            </div>
+                            </div>-->
                             <div class="slider__description">
                                     <p class="slider__description-main"><b>На фотографии:</b> Набор салфеток под приборы 50x35см, КРЕСТЕЦКАЯ СТРОЧКА</p>
                                     <div class="slider__description-price-list">
@@ -356,13 +398,13 @@
                                     <img src="./images/9.480x381.jpg" alt="" class="slider__image" />
                                 </picture>
                             </div>
-                            <div class="slider__image-preview-wrapper">
+                            <!--<div class="slider__image-preview-wrapper">
                                 <picture class="slider__picture-preview">
                                     <source srcset="./images/9.206x165.jpg" media="(min-width: 1200px)">
                                     <source srcset="./images/9.125x100.jpg" media="(min-width: 667px)">
                                     <img src="./images/9.79x63.jpg" alt="" class="slider__image-preview" />
                                 </picture>
-                            </div>
+                            </div>-->
                             <div class="slider__description">
                                     <p class="slider__description-main"><b>На фотографии:</b> Набор из 4 салфеток 40x40см, КРЕСТЕЦКАЯ СТРОЧКА</p>
                                     <div class="slider__description-price-list">
@@ -372,12 +414,29 @@
                             </div>
                         </div>
                     </div>
-                </div></div>
+                </div>
+                <div class="slider__controls">
+                  <span class="button button-controls active"></span>
+                  <span class="button button-controls"></span>
+                  <span class="button button-controls"></span>
+                  <span class="button button-controls"></span>
+                  <span class="button button-controls"></span>
+                  <span class="button button-controls"></span>
+                </div>
+                <div class="slider__caret--left"></div>
+                <div class="slider__caret--right"></div>
+              </div>
                 <p class="service__description">Нанесение монограммы в виде инициалов.</p>
                 <p class="service__note">Вышивка монограммы выполняется на 1 виде салфеток, так же любого количества (6/12/18...персон).</p>
                 <div class="service__buttons">
-                    <span class="service__button-buy-sertificate"><a class="button button--black" href="#page-6" data-page="6">Купить сертификат</a></span>
-                    <span class="service__button-details"><a class="button button--transparent" href="/">Рассказать подробно</a></span>
+                    <span class="service__button-buy-sertificate"><a class="button button--black" href="/wedding#page-6" data-page="6">Купить сертификат</a></span>
+                    <span class="service__button-details"><a class="button button--transparent" href="/wedding#">Рассказать подробно</a></span>
+                </div>
+                <div class="service__calltext">
+                  <p>
+                    Подробнее о Сертификате вам расскажет наш менеджер: 8 (800) 250 61 81 <br />
+                    Доставка по России бесплатно
+                  </p>
                 </div>
                 <span class="service__link-call"><a class="button button--link-call" href="tel:88002506181" title="телефон менеджера - 8 800 250 61 81">Хочу задать вопрос по телефону</a></span>
             </div>
@@ -435,7 +494,7 @@
             </div>
         </div>
     </footer>
-    
+
     <noscript id="deferred-styles" >
         <link rel="stylesheet" type="text/css" href="style.css" />
     </noscript >

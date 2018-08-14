@@ -128,6 +128,33 @@ $('document').ready(function () {
     });
   });
 
+  $('.slider').find('.slider__caret--left').click(function(e){
+    e.stopPropagation();
+    var curitem = $(e.target).siblings().find('.slider__item--active')[0];
+    var curdot = $(e.target).siblings().find('.button-controls.active')[0];
+    console.log(e.target);
+    if($(curitem).prev().length){
+      $(curdot).removeClass('active');
+      $(curdot).prev().addClass('active');
+      $(curitem).removeClass('slider__item--left').addClass('slider__item--right');
+      $(curitem).removeClass('slider__item--active').removeClass('slider__item--active');
+      $(curitem).prev().removeClass('slider__item--left').addClass('slider__item--active');
+    }
+  });
+  $('.slider').find('.slider__caret--right').click(function(e){
+    e.stopPropagation();
+    var curitem = $(e.target).siblings().find('.slider__item--active')[0];
+    var curdot = $(e.target).siblings().find('.button-controls.active')[0];
+    console.log(e.target);
+    if($(curitem).next().length){
+      $(curdot).removeClass('active');
+      $(curdot).next().addClass('active');
+      $(curitem).removeClass('slider__item--right').addClass('slider__item--left');
+      $(curitem).removeClass('slider__item--active');
+      $(curitem).next().removeClass('slider__item--right').addClass('slider__item--active');
+    }
+  });
+
   var $supportContact = $('#support-contact');
   var $reactForm = $('#cert-app-wed');
   // $reactForm.hide();
